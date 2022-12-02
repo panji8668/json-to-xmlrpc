@@ -29,7 +29,7 @@ const bustHeaders = (request, response, next) => {
   next();
 };
 
-app.get('/trx', async (req, res) => {
+app.get('/xmlrpc/trx', async (req, res) => {
 
     const resp = await st24.sendTopupTequest(req.query.tujuan,req.query.kode,req.query.idtrx);
     res.json(resp)
