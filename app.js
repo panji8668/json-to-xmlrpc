@@ -46,7 +46,7 @@ app.post('/xmlrpc/callback',bustHeaders,xmlparser({explicitArray:false}),(req,re
     res.json({success:true,msg:'ok'})
 })
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log(`Server started on port`);
 });
 
